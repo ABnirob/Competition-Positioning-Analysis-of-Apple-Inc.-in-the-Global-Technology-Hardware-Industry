@@ -27,6 +27,11 @@ Designed with a **Power BI Executive Dashboard** approach, this project demonstr
 # 📊 Dashboard Preview
 
 > Replace this image with your dashboard screenshot.
+<img width="1920" height="910" alt="1" src="https://github.com/user-attachments/assets/f2fcdd9d-a3b8-4199-87fd-f1dbae8b72de" />
+<img width="1920" height="912" alt="2" src="https://github.com/user-attachments/assets/799e1baf-5705-42f3-b8a9-3eaaa73981d8" />
+<img width="1920" height="898" alt="3" src="https://github.com/user-attachments/assets/4e3ce84b-78bf-4d9d-a79d-0387e8cab0b8" />
+<img width="1920" height="842" alt="4" src="https://github.com/user-attachments/assets/12926d7e-c376-4fcb-bfeb-b0120f8ea406" />
+
 
 <p align="center">
 <img src="Dashboard/dashboard.png" width="100%">
