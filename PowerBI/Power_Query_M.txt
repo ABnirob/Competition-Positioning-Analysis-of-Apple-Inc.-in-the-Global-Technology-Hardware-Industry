@@ -1,0 +1,23 @@
+// =========================================================================
+// POWER QUERY M ETL TRANSFORMATION CODE
+// Copy-paste this directly inside the Power BI Advanced Editor.
+// =========================================================================
+
+let
+    Source = Csv.Document(File.Contents("C:\Datasets\Apple_Competition_Data.csv"), [Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{
+        {"Company", type text}, 
+        {"Revenue_Billion_USD", type number}, 
+        {"Market_Cap_Billion_USD", type number}, 
+        {"Net_Income_Billion_USD", type number}, 
+        {"RD_Intensity_Pct", type number}, 
+        {"Operating_Margin_Pct", type number}, 
+        {"Employee_Productivity_k_USD", Int64.Type}, 
+        {"Market_Share_Pct", Int64.Type}, 
+        {"Brand_Score", Int64.Type}, 
+        {"Innovation_Score", Int64.Type}
+    }),
+    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Company", "Company Name"}})
+in
+    #"Renamed Columns"

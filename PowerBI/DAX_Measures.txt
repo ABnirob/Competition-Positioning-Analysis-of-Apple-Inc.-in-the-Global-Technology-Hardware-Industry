@@ -1,0 +1,26 @@
+-- =========================================================================
+-- CUSTOM DAX MEASURES
+-- Paste these directly in Power BI to monitor business objectives.
+-- =========================================================================
+
+Total Revenue (B) = SUM(competitor_metrics[revenue_usd_billions])
+
+Total Market Cap (B) = SUM(competitor_metrics[market_cap_usd_billions])
+
+Operating Margin % = AVERAGE(competitor_metrics[operating_margin_percentage]) / 100
+
+Net Profit Margin % = DIVIDE(SUM(competitor_metrics[net_income_usd_billions]), SUM(competitor_metrics[revenue_usd_billions]), 0)
+
+Employee Productivity (k) = AVERAGE(competitor_metrics[employee_productivity_thousands_usd])
+
+Brand Strength Score = MAX(competitor_metrics[brand_score])
+
+Innovation Score Index = MAX(competitor_metrics[innovation_score])
+
+-- Multi-Weighted Overall Competitive Score Index Measure
+Overall Competitive Score = 
+VAR MarginNormalized = ([Operating Margin %] * 100) / 30.0
+VAR BrandNormalized = [Brand Strength_Score] / 100.0
+VAR InnovationNormalized = [Innovation Score Index] / 100.0
+RETURN 
+    (MarginNormalized * 0.40) + (BrandNormalized * 0.30) + (InnovationNormalized * 0.30)

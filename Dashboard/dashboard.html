@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍎 Apple Inc. Competition Positioning Executive Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Space Grotesk', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col antialiased">
+  <!-- Top Header -->
+  <header class="border-b border-slate-800 bg-slate-950 px-6 py-4 flex items-center justify-between shadow-lg">
+    <div class="flex items-center space-x-3">
+      <div class="h-9 w-9 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white shadow-md text-lg">
+        🍎
+      </div>
+      <div>
+        <span class="text-xs uppercase font-mono tracking-widest text-indigo-400">Power BI Executive BI Workspace</span>
+        <h1 class="text-lg font-bold text-slate-50">Apple Competition Positioning Dashboard</h1>
+      </div>
+    </div>
+    <div class="flex items-center space-x-3 text-xs">
+      <span class="px-2.5 py-1 bg-emerald-950 text-emerald-400 font-mono rounded-full border border-emerald-800">
+        ● LIVE MODEL
+      </span>
+      <span class="text-slate-400 font-mono">MD. Abul Bashar Nirob</span>
+    </div>
+  </header>
+
+  <!-- Interactive Grid Container -->
+  <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+    
+    <!-- Sidebar Controls -->
+    <aside class="w-full md:w-64 border-r border-slate-800 bg-slate-950/80 p-5 space-y-2.5">
+      <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-500 px-3 mb-2 font-mono">
+        Executive Navigation
+      </div>
+      <button onclick="switchTab('title')" id="nav-title" class="tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition bg-indigo-600/20 text-indigo-400 border border-indigo-500/30">
+        📑 Executive Overview
+      </button>
+      <button onclick="switchTab('ranking')" id="nav-ranking" class="tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition text-slate-400 hover:bg-slate-900 hover:text-slate-200">
+        📊 Competition Positioning Matrix
+      </button>
+      <button onclick="switchTab('kpi')" id="nav-kpi" class="tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition text-slate-400 hover:bg-slate-900 hover:text-slate-200">
+        🔬 KPI Radar Examination
+      </button>
+      <button onclick="switchTab('summary')" id="nav-summary" class="tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition text-slate-400 hover:bg-slate-900 hover:text-slate-200">
+        💡 Business Recommendations
+      </button>
+
+      <div class="pt-6 border-t border-slate-800 mt-6 space-y-4">
+        <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-500 px-3 font-mono">Data Parameters</div>
+        <div class="bg-slate-900 p-4 rounded-xl text-xs space-y-2 border border-slate-800">
+          <div class="text-slate-400">Industry: <span class="text-slate-100 font-bold">Technology Hardware, Storage & Peripherals</span></div>
+          <div class="text-slate-400">Focus: <span class="text-indigo-400 font-bold">Apple Inc.</span></div>
+          <div class="text-slate-400">Scope: <span class="text-slate-100">Global | FY 2024</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Content -->
+    <main class="flex-1 p-6 md:p-8 overflow-y-auto bg-slate-900/50">
+      
+      <!-- EXECUTIVE OVERVIEW TAB -->
+      <section id="tab-title" class="tab-content space-y-6">
+        <!-- Visual KPI Cards Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 shadow-sm">
+            <p class="text-[10px] font-mono uppercase text-slate-400">Total Revenue</p>
+            <p class="text-2xl font-bold text-slate-50 mt-1">$391B</p>
+            <span class="text-[10px] text-emerald-400 font-semibold font-mono">Rank #1 in Segment</span>
+          </div>
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 shadow-sm">
+            <p class="text-[10px] font-mono uppercase text-slate-400">Operating Margin</p>
+            <p class="text-2xl font-bold text-emerald-400 mt-1">25.3%</p>
+            <span class="text-[10px] text-slate-400 font-mono">Industry Avg: 8.9%</span>
+          </div>
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 shadow-sm">
+            <p class="text-[10px] font-mono uppercase text-slate-400">Market Valuation</p>
+            <p class="text-2xl font-bold text-indigo-400 mt-1">$3100B</p>
+            <span class="text-[10px] text-indigo-300 font-mono">Premium Platform spacing</span>
+          </div>
+          <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 shadow-sm">
+            <p class="text-[10px] font-mono uppercase text-slate-400">Innovation Score</p>
+            <p class="text-2xl font-bold text-pink-400 mt-1">98 / 100</p>
+            <span class="text-[10px] text-pink-300 font-mono">Unmatched Loyalty factor</span>
+          </div>
+        </div>
+
+        <!-- Cover Abstract Study Card -->
+        <div class="border border-slate-800 bg-slate-950 p-8 rounded-xl shadow-xl max-w-4xl mx-auto space-y-6">
+          <div class="text-center">
+            <div class="inline-block px-4 py-1.5 bg-indigo-950/80 border border-indigo-500/30 text-indigo-400 rounded-full font-mono text-xs tracking-wider">
+              EXECUTIVE COGNITIVE STUDY
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-50 tracking-tight leading-tight mt-4 font-display">
+              🍎 Apple Inc. Competition Positioning Study: Executive Business Intelligence
+            </h2>
+            <div class="w-24 h-1 bg-indigo-600 mx-auto rounded-full mt-4"></div>
+          </div>
+
+          <div class="text-left bg-slate-900/50 border border-slate-800 p-6 rounded-lg space-y-2 mt-6">
+            <h3 class="text-xs uppercase tracking-wider font-semibold text-slate-400 font-mono">Executive Study Abstract</h3>
+            <p class="text-slate-300 leading-relaxed text-sm text-justify">This strategic positioning mini-project explores the competitive landscape of Apple Inc. within the Technology Hardware, Storage & Peripherals segment using the SCDATA Global Competitive Positioning System (GCPS). It contrasts Apple's operating metrics, brand equity, and innovation posture against core industry competitors: Samsung, Dell, Lenovo, and HP. The evaluation addresses Apple's industry-leading operating margin of 25.3% and premium $3.1 Trillion valuation, demonstrating how its closed-loop hardware-software services integration converts transactional hardware sales into a high-utility subscription ecosystem. Strategic findings point to actionable recommendations across AI integrations and supply chain resiliency.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPETITION POSITIONING TAB -->
+      <section id="tab-ranking" class="tab-content hidden space-y-6">
+        <div class="max-w-6xl mx-auto space-y-6">
+          <div>
+            <h2 class="text-xl font-bold text-slate-50 font-display">Topic A: Competition Positioning Matrix</h2>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Sort and benchmark absolute scale and profitability factors.</p>
+          </div>
+
+          <!-- Pure HTML/CSS SVG comparative bars -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Revenue Bars -->
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 space-y-4">
+              <h3 class="text-xs uppercase tracking-wider text-slate-400 font-mono font-bold">Revenue Scale ($ Billion USD)</h3>
+              <div class="space-y-3.5 pt-2">
+                
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-indigo-400 font-bold">Apple (Focus)</span>
+                        <span class="text-slate-400 font-mono">$391B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-indigo-600" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Samsung </span>
+                        <span class="text-slate-400 font-mono">$222B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-600" style="width: 56.77749360613811%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Dell </span>
+                        <span class="text-slate-400 font-mono">$102B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-600" style="width: 26.08695652173913%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Lenovo </span>
+                        <span class="text-slate-400 font-mono">$62B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-600" style="width: 15.856777493606138%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">HP </span>
+                        <span class="text-slate-400 font-mono">$54B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-600" style="width: 13.810741687979538%"></div>
+                      </div>
+                    </div>
+                  
+              </div>
+            </div>
+
+            <!-- Market Cap Bars -->
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 space-y-4">
+              <h3 class="text-xs uppercase tracking-wider text-slate-400 font-mono font-bold">Market Valuation spacing ($ Billion)</h3>
+              <div class="space-y-3.5 pt-2">
+                
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-indigo-400 font-bold">Apple (Focus)</span>
+                        <span class="text-slate-400 font-mono">$3100B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-indigo-500" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Samsung </span>
+                        <span class="text-slate-400 font-mono">$370B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-700" style="width: 11.935483870967742%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Dell </span>
+                        <span class="text-slate-400 font-mono">$95B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-700" style="width: 3.064516129032258%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">Lenovo </span>
+                        <span class="text-slate-400 font-mono">$15B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-700" style="width: 0.4838709677419355%"></div>
+                      </div>
+                    </div>
+                  
+                    <div class="space-y-1">
+                      <div class="flex justify-between text-xs font-medium">
+                        <span class="text-slate-300">HP </span>
+                        <span class="text-slate-400 font-mono">$32B</span>
+                      </div>
+                      <div class="h-3.5 w-full bg-slate-900 rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-slate-700" style="width: 1.032258064516129%"></div>
+                      </div>
+                    </div>
+                  
+              </div>
+            </div>
+          </div>
+
+          <!-- Datagrid -->
+          <div class="bg-slate-950 rounded-xl border border-slate-800 overflow-hidden shadow-lg">
+            <table class="w-full text-left text-xs text-slate-300">
+              <thead class="bg-slate-900 text-[10px] font-mono uppercase text-slate-400 border-b border-slate-800">
+                <tr>
+                  <th class="p-4 text-center">Rank</th>
+                  <th class="p-4">Competitor Name</th>
+                  <th class="p-4 text-right">Revenue ($B)</th>
+                  <th class="p-4 text-right">Market Cap ($B)</th>
+                  <th class="p-4 text-right">Net Income ($B)</th>
+                  <th class="p-4 text-right">Operating Margin</th>
+                  <th class="p-4 text-right">R&D Intensity</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60">
+                
+                    <tr class="bg-indigo-950/20 text-slate-50 font-medium transition">
+                      <td class="p-4 text-center font-mono font-bold text-slate-400">#1</td>
+                      <td class="p-4 flex items-center space-x-2">
+                        <span>Apple</span>
+                        <span class="px-2 py-0.5 bg-indigo-600/30 text-indigo-400 rounded-full text-[10px] font-mono border border-indigo-500/20">FOCUS</span>
+                      </td>
+                      <td class="p-4 text-right font-mono">$391B</td>
+                      <td class="p-4 text-right font-mono text-indigo-400">$3100B</td>
+                      <td class="p-4 text-right font-mono">$97B</td>
+                      <td class="p-4 text-right font-mono text-emerald-400">25.3%</td>
+                      <td class="p-4 text-right font-mono text-pink-400">7.8%</td>
+                    </tr>
+                  
+                    <tr class="hover:bg-slate-900/40 transition">
+                      <td class="p-4 text-center font-mono font-bold text-slate-400">#2</td>
+                      <td class="p-4 flex items-center space-x-2">
+                        <span>Samsung</span>
+                        
+                      </td>
+                      <td class="p-4 text-right font-mono">$222B</td>
+                      <td class="p-4 text-right font-mono text-indigo-400">$370B</td>
+                      <td class="p-4 text-right font-mono">$11.4B</td>
+                      <td class="p-4 text-right font-mono text-emerald-400">5.7%</td>
+                      <td class="p-4 text-right font-mono text-pink-400">11.2%</td>
+                    </tr>
+                  
+                    <tr class="hover:bg-slate-900/40 transition">
+                      <td class="p-4 text-center font-mono font-bold text-slate-400">#3</td>
+                      <td class="p-4 flex items-center space-x-2">
+                        <span>Dell</span>
+                        
+                      </td>
+                      <td class="p-4 text-right font-mono">$102B</td>
+                      <td class="p-4 text-right font-mono text-indigo-400">$95B</td>
+                      <td class="p-4 text-right font-mono">$3.2B</td>
+                      <td class="p-4 text-right font-mono text-emerald-400">4.8%</td>
+                      <td class="p-4 text-right font-mono text-pink-400">3.1%</td>
+                    </tr>
+                  
+                    <tr class="hover:bg-slate-900/40 transition">
+                      <td class="p-4 text-center font-mono font-bold text-slate-400">#4</td>
+                      <td class="p-4 flex items-center space-x-2">
+                        <span>Lenovo</span>
+                        
+                      </td>
+                      <td class="p-4 text-right font-mono">$62B</td>
+                      <td class="p-4 text-right font-mono text-indigo-400">$15B</td>
+                      <td class="p-4 text-right font-mono">$1.6B</td>
+                      <td class="p-4 text-right font-mono text-emerald-400">3.5%</td>
+                      <td class="p-4 text-right font-mono text-pink-400">3.2%</td>
+                    </tr>
+                  
+                    <tr class="hover:bg-slate-900/40 transition">
+                      <td class="p-4 text-center font-mono font-bold text-slate-400">#5</td>
+                      <td class="p-4 flex items-center space-x-2">
+                        <span>HP</span>
+                        
+                      </td>
+                      <td class="p-4 text-right font-mono">$54B</td>
+                      <td class="p-4 text-right font-mono text-indigo-400">$32B</td>
+                      <td class="p-4 text-right font-mono">$2.9B</td>
+                      <td class="p-4 text-right font-mono text-emerald-400">5.4%</td>
+                      <td class="p-4 text-right font-mono text-pink-400">3%</td>
+                    </tr>
+                  
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div class="bg-slate-950/80 border border-slate-800 p-5 rounded-xl space-y-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider font-bold text-indigo-400">Academic Observations</h4>
+              <p class="text-slate-300 text-xs leading-relaxed text-justify">Apple ranks #1 in enterprise performance and revenue ($391B), followed by Samsung ($222B), Dell ($102B), Lenovo ($62B), and HP ($54B). In valuation, Apple’s $3,100B Market Cap eclipses peers by orders of magnitude, reflecting its premium brand leverage and hardware-software services integration ecosystem.</p>
+            </div>
+            <div class="bg-slate-950/80 border border-slate-800 p-5 rounded-xl space-y-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider font-bold text-indigo-400">Novel Competitor Spacing Insights</h4>
+              <p class="text-slate-300 text-xs leading-relaxed text-justify">The spacing between enterprise rankings reveals a heavy platform-ecosystem margin multiplier. While competitors like Samsung and Dell move substantial physical hardware volume, they capture significantly lower operating profit margins (5.7% and 4.8% respectively). Apple's services division effectively extracts lifetime value from transactional device buyers, translating brand equity into a dominant cash flow engine.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPI RADAR TAB -->
+      <section id="tab-kpi" class="tab-content hidden space-y-6">
+        <div class="max-w-6xl mx-auto space-y-6">
+          <div>
+            <h2 class="text-xl font-bold text-slate-50 font-display">Topic B: KPI Radar Benchmarking</h2>
+            <p class="text-xs text-slate-400 font-mono mt-0.5">Benchmark efficiency, technology deployment, and capital productivity ratios.</p>
+          </div>
+
+          <!-- Radar footprint SVG -->
+          <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4 text-xs">
+              <h3 class="text-sm font-semibold text-slate-200">Efficiency Spacing Footprint</h3>
+              <p class="text-slate-400 leading-relaxed text-justify">
+                Apple commands a leading strategic footprint across multiple operational sectors, particularly in Operating Margin and Employee Asset productivity. While research and development (R&D) intensity as a percentage is leaner, the sheer scale of Apple's revenue enables it to execute massive capital deployment in next-gen hardware architectures.
+              </p>
+              
+              <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-2">
+                <div class="flex justify-between font-mono">
+                  <span class="text-slate-400">Operating Margin Gap:</span>
+                  <span class="text-emerald-400 font-bold">+16.4% vs Avg</span>
+                </div>
+                <div class="flex justify-between font-mono">
+                  <span class="text-slate-400">Productivity Multiple:</span>
+                  <span class="text-indigo-400 font-bold">2.2x Peer Avg</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SVG Visual Radar Plot -->
+            <div class="flex items-center justify-center p-4 bg-slate-900/40 rounded-lg border border-slate-800">
+              <svg viewBox="0 0 200 200" class="w-48 h-48 overflow-visible">
+                <!-- Concentric lines -->
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#334155" stroke-dasharray="4" stroke-width="1" />
+                <circle cx="100" cy="100" r="50" fill="none" stroke="#334155" stroke-dasharray="4" stroke-width="1" />
+                <circle cx="100" cy="100" r="20" fill="none" stroke="#334155" stroke-dasharray="4" stroke-width="1" />
+                
+                <line x1="100" y1="20" x2="100" y2="180" stroke="#475569" stroke-width="1" />
+                <line x1="20" y1="100" x2="180" y2="100" stroke="#475569" stroke-width="1" />
+                
+                <text x="100" y="15" text-anchor="middle" class="text-[9px] fill-slate-400 font-mono">Margin</text>
+                <text x="185" y="103" text-anchor="start" class="text-[9px] fill-slate-400 font-mono">R&D</text>
+                <text x="100" y="195" text-anchor="middle" class="text-[9px] fill-slate-400 font-mono">Profitability</text>
+                <text x="15" y="103" text-anchor="end" class="text-[9px] fill-slate-400 font-mono">Productivity</text>
+                
+                <!-- Focus polygon (margin=75%, r&d=35%, profit=80%, productivity=85%) -->
+                <polygon points="100,40 135,100 100,165 30,100" fill="rgba(99, 102, 241, 0.3)" stroke="#6366f1" stroke-width="2" />
+                
+                <!-- Mean polygon (margin=20%, r&d=50%, profit=25%, productivity=30%) -->
+                <polygon points="100,85 140,100 100,120 70,100" fill="rgba(148, 163, 184, 0.15)" stroke="#94a3b8" stroke-dasharray="2" stroke-width="1.5" />
+                
+                <circle cx="120" cy="180" r="3" fill="#6366f1" />
+                <text x="127" y="183" class="text-[8px] fill-slate-300 font-mono">Apple</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div class="bg-slate-950/80 border border-slate-800 p-5 rounded-xl space-y-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider font-bold text-indigo-400">Technical Gap Analysis Observations</h4>
+              <p class="text-slate-300 text-xs leading-relaxed text-justify">Comparing key performance indicators, Apple excels dramatically with an Operating Margin of 25.3% vs. the industry peer average of 6.2%. Apple's Innovation Index stands at a premium 98 score alongside a 98 Brand score. Additionally, Apple demonstrates unparalleled Employee Productivity, generating $2.38 Million of revenue per employee, which is over 3x Samsung's productivity.</p>
+            </div>
+            <div class="bg-slate-950/80 border border-slate-800 p-5 rounded-xl space-y-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider font-bold text-indigo-400">Socio-Economic & Financial Gaps</h4>
+              <p class="text-slate-300 text-xs leading-relaxed text-justify">These significant KPI gaps provide Apple with immense strategic pricing power and defensive padding during chip supply cycles. However, the high-margin hardware upgrades cycle faces saturation pressure. To preserve this valuation spacing premium, Apple must proactively deploy on-device artificial intelligence services and expand recurring services revenue.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUSINESS RECOMMENDATIONS TAB -->
+      <section id="tab-summary" class="tab-content hidden space-y-6">
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="border border-slate-800 bg-slate-950 p-8 rounded-xl shadow-xl space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div>
+                <span class="text-xs uppercase font-mono tracking-widest text-indigo-400">Topic C: Synthesis Summary Notes</span>
+                <h2 class="text-xl font-bold text-slate-50 font-display">Executive Business Recommendations</h2>
+              </div>
+              <span class="px-2 py-0.5 bg-indigo-950 text-indigo-400 text-[10px] font-mono rounded border border-indigo-900/30">
+                GRADED DELIVERABLE
+              </span>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-xs uppercase tracking-wider text-slate-400 font-mono font-bold">Consolidated Executive Insights</h3>
+              <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-800 text-slate-300 text-xs leading-relaxed text-justify">
+                <p>Apple's competitive position is unmatched in hardware margins and brand equity. To sustain long-term dominance, leadership must mitigate market saturation by expanding AI services ecosystem and reinforcing manufacturing/supply chain resilience.</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-xs uppercase tracking-wider text-slate-400 font-mono font-bold">Graded Practical Actionable Directives</h3>
+              <div class="grid grid-cols-1 gap-4">
+                
+                  <div class="flex items-start space-x-3.5 bg-slate-900 p-4 rounded-lg border border-slate-800/80">
+                    <span class="h-6 w-6 rounded-full bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 flex items-center justify-center font-mono font-bold text-xs mt-0.5">1</span>
+                    <p class="text-slate-200 text-xs leading-relaxed">Accelerate Apple Intelligence Services Ecosystem: Deploy localized generative AI features across devices to lock-in premium subscriptions and drive hardware cycles.</p>
+                  </div>
+                
+                  <div class="flex items-start space-x-3.5 bg-slate-900 p-4 rounded-lg border border-slate-800/80">
+                    <span class="h-6 w-6 rounded-full bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 flex items-center justify-center font-mono font-bold text-xs mt-0.5">2</span>
+                    <p class="text-slate-200 text-xs leading-relaxed">Strengthen Supply Chain Resilience: Diversify manufacturing locations and build strategic components redundancy to mitigate global supply disruptions.</p>
+                  </div>
+                
+                  <div class="flex items-start space-x-3.5 bg-slate-900 p-4 rounded-lg border border-slate-800/80">
+                    <span class="h-6 w-6 rounded-full bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 flex items-center justify-center font-mono font-bold text-xs mt-0.5">3</span>
+                    <p class="text-slate-200 text-xs leading-relaxed">Optimize R&D Capital Allocation: Target next-generation wearable form-factors, spatial computing, and proprietary silicon nodes to sustain the innovation score premium.</p>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Dynamic tab toggler -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach((el) => {
+        el.classList.add('hidden');
+      });
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach((btn) => {
+        btn.className = "tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition text-slate-400 hover:bg-slate-900 hover:text-slate-200";
+      });
+      document.getElementById('nav-' + tabId).className = "tab-btn w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-semibold tracking-wide transition bg-indigo-600/20 text-indigo-400 border border-indigo-500/30";
+    }
+  </script>
+</body>
+</html>
