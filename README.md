@@ -22,6 +22,8 @@ The dashboard provides executive-level insights into Apple's competitive landsca
 
 Designed with a **Power BI Executive Dashboard** approach, this project demonstrates real-world **Business Intelligence**, **Competitive Analysis**, **KPI Monitoring**, and **Executive Reporting** techniques.
 
+
+
 ---
 
 # 📊 Dashboard Preview
